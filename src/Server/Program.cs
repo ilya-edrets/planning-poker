@@ -1,6 +1,7 @@
-﻿namespace PlanningPoker.Host
+﻿namespace PlanningPoker.Server
 {
     using System.Threading.Tasks;
+    using Microsoft.Extensions.DependencyInjection;
     using Microsoft.Extensions.Hosting;
     using Orleans;
     using Orleans.Hosting;
@@ -13,8 +14,15 @@
                 .UseOrleans(builder =>
                 {
                     builder
+                        .UseSignalR()
+                        .RegisterHub<MainHub>()
+                        .AddMemoryGrainStorage("PubSubStore")
                         .UseDashboard(configuration => configuration.Port = 3333) // default port is 8080
                         .UseLocalhostClustering();
+                })
+                .ConfigureServices(services =>
+                {
+                    services.AddSignalR();
                 })
                 .Build()
                 .RunAsync();

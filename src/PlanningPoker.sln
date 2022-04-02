@@ -10,11 +10,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Shared.props = Shared.props
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrainInterfaces", "GrainInterfaces\GrainInterfaces.csproj", "{55A38B58-2F9F-41FD-AF71-4ECA52BB9303}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interfaces", "Interfaces\Interfaces.csproj", "{55A38B58-2F9F-41FD-AF71-4ECA52BB9303}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grains", "Grains\Grains.csproj", "{73DE1FFA-0578-443E-99D4-629141BC4DAA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Grains", "Grains\Grains.csproj", "{73DE1FFA-0578-443E-99D4-629141BC4DAA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Host", "Host\Host.csproj", "{E7C049A1-48C6-4B69-957B-5904E537EBF4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Server", "Server\Server.csproj", "{E7C049A1-48C6-4B69-957B-5904E537EBF4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csproj", "{C587A4F1-8DED-4618-B730-25CA499FD6A5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -34,6 +36,10 @@ Global
 		{E7C049A1-48C6-4B69-957B-5904E537EBF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E7C049A1-48C6-4B69-957B-5904E537EBF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E7C049A1-48C6-4B69-957B-5904E537EBF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C587A4F1-8DED-4618-B730-25CA499FD6A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C587A4F1-8DED-4618-B730-25CA499FD6A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C587A4F1-8DED-4618-B730-25CA499FD6A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C587A4F1-8DED-4618-B730-25CA499FD6A5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

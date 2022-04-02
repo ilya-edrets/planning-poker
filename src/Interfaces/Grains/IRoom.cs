@@ -1,4 +1,4 @@
-﻿namespace PlanningPoker.GrainInterfaces
+﻿namespace PlanningPoker.Interfaces.Grains
 {
     using Orleans;
 

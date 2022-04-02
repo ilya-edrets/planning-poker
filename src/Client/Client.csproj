@@ -3,13 +3,15 @@
   <Import Project="..\Shared.props" />
 
   <PropertyGroup>
-    <AssemblyName>PlanningPoker.Grains</AssemblyName>
-    <RootNamespace>PlanningPoker.Grains</RootNamespace>
+    <OutputType>Exe</OutputType>
+    <AssemblyName>PlanningPoker.Client</AssemblyName>
+    <RootNamespace>PlanningPoker.Client</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Orleans.Core.Abstractions" />
-    <PackageReference Include="Microsoft.Orleans.CodeGenerator.MSBuild" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" />
+    <PackageReference Include="Microsoft.Orleans.Client" />
+    <PackageReference Include="SignalR.Orleans" />
   </ItemGroup>
 
   <ItemGroup>

@@ -3,8 +3,8 @@
   <Import Project="..\Shared.props" />
 
   <PropertyGroup>
-    <AssemblyName>PlanningPoker.GrainInterfaces</AssemblyName>
-    <RootNamespace>PlanningPoker.GrainInterfaces</RootNamespace>
+    <AssemblyName>PlanningPoker.Interfaces</AssemblyName>
+    <RootNamespace>PlanningPoker.Interfaces</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
