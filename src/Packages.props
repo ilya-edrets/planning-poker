@@ -10,7 +10,6 @@
     <PackageReference Update="Microsoft.Orleans.Core.Abstractions" Version="3.6.0" />
     <PackageReference Update="Microsoft.Orleans.Server" Version="3.6.0" />
     <PackageReference Update="OrleansDashboard" Version="3.6.1" />
-    <PackageReference Update="SignalR.Orleans" Version="2.1.0" />
   </ItemGroup>
 
   <ItemGroup>

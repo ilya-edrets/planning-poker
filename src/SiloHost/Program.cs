@@ -14,8 +14,6 @@
                 .UseOrleans(builder =>
                 {
                     builder
-                        .UseSignalR()
-                        .RegisterHub<MainHub>()
                         .AddMemoryGrainStorage("PubSubStore")
                         .UseDashboard(configuration => configuration.Port = 3333) // default port is 8080
                         .UseLocalhostClustering();

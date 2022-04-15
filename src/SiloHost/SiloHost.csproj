@@ -13,7 +13,6 @@
     <PackageReference Include="Microsoft.Orleans.CodeGenerator.MSBuild" />
     <PackageReference Include="Microsoft.Orleans.Server" />
     <PackageReference Include="OrleansDashboard" />
-    <PackageReference Include="SignalR.Orleans" />
   </ItemGroup>
 
   <ItemGroup>
