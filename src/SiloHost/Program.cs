@@ -1,29 +1,31 @@
 ﻿namespace PlanningPoker.Server
 {
     using System.Threading.Tasks;
-    using Microsoft.Extensions.DependencyInjection;
     using Microsoft.Extensions.Hosting;
+    using Microsoft.Extensions.Logging;
     using Orleans;
     using Orleans.Hosting;
+    using PlanningPoker.Grains;
 
     public class Program
     {
         public static Task Main(string[] args)
         {
-            return Host.CreateDefaultBuilder(args)
+            return Host.CreateDefaultBuilder()
                 .UseOrleans(builder =>
                 {
                     builder
+                        .UseLocalhostClustering()
                         .AddMemoryGrainStorage("PubSubStore")
-                        .UseDashboard(configuration => configuration.Port = 3333) // default port is 8080
-                        .UseLocalhostClustering();
+                        .AddSimpleMessageStreamProvider("room", options =>
+                        {
+                            options.FireAndForgetDelivery = true;
+                        })
+                        .ConfigureApplicationParts(parts => parts.AddApplicationPart(typeof(RoomGrain).Assembly).WithReferences())
+                        .UseDashboard();
                 })
-                .ConfigureServices(services =>
-                {
-                    services.AddSignalR();
-                })
-                .Build()
-                .RunAsync();
+                .ConfigureLogging(builder => builder.AddConsole())
+                .RunConsoleAsync();
         }
     }
 }

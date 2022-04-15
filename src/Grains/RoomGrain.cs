@@ -60,7 +60,7 @@
             if (this.members.ContainsKey(member.Id))
             {
                 this.members.Remove(member.Id);
-                var @event = new MemberLeaveEvent(member);
+                var @event = new MemberLeftEvent(member);
                 await this.stream.OnNextAsync(@event);
             }
         }

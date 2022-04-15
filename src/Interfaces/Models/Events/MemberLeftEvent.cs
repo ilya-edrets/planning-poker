@@ -1,6 +1,6 @@
 ﻿namespace PlanningPoker.Interfaces.Models.Events
 {
-    public record MemberLeaveEvent(Member Member) : RoomEvent
+    public record MemberLeftEvent(Member Member) : RoomEvent
     {
     }
 }
